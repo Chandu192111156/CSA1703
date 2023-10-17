@@ -1,5 +1,5 @@
 class VacuumCleaner:
-    def _init_(self, environment):
+    def __init__(self, environment):
         self.environment = environment
         self.position = 0  # Vacuum cleaner's initial position
     def clean(self):
@@ -19,7 +19,7 @@ class VacuumCleaner:
                 self.position -= 1
             dirty_cells = [i for i, cell in enumerate(self.environment) if cell == 'Dirty']
         print("All cells are clean.")
-if _name_ == "_main_":
+if __name__ == "__main__":
     environment = ['Dirty', 'Clean', 'Dirty', 'Clean', 'Clean']
     vacuum_cleaner = VacuumCleaner(environment)
     print("Initial state:")
